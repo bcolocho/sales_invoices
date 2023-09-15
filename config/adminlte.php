@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'billing',
+    'title' => 'false',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => '| SB Desing',
 
     /*
     |--------------------------------------------------------------------------
@@ -193,8 +193,8 @@ return [
     'classes_content_header' => '',
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_sidebar_nav' => 'danger',
+    'classes_topnav' => 'navbar-warning navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
