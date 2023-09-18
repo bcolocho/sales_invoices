@@ -40,8 +40,9 @@ class CustomerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Customers $customers)
+    public function show($id)
     {
+        $customers = Customers::find($id);
         return view('customers.show', compact('customers'));
     }
 

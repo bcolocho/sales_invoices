@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Edit Customer</h1>
 
-    <form action="{{ route('customers.update', $customer->id) }}" method="POST">
+    <form action="{{ route('customer.update', $customers->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">

@@ -9,6 +9,6 @@
     <p><strong>Address:</strong> {{ $customer->address }}</p>
 
 
-    <a href="{{ route('customers.index') }}" class="btn btn-primary">Back to List</a>
+    <a href="{{ customers->customer_name }}" class="btn btn-primary">Back to List</a>
 </div>
 @endsection
