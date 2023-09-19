@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'billing',
+    'title' => '',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => '| SB Desing',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>SB</b> designs',
+    'logo' => '<b>SB</b> Designs',
     'logo_img' => 'vendor/adminlte/dist/img/logo.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -150,8 +150,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -187,14 +187,14 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => '',
+    'classes_brand' => 'bg-danger',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-warning navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -292,11 +292,6 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
@@ -309,28 +304,33 @@ return [
         ],
         [
             'text'        => 'employee',
-            'url'         => 'admin/employee',
+            'url'         => 'dashboard/employee',
             'icon'        => 'fas fa-fw fa-user',
             'label_color' => 'success',
+            'icon_color' => 'info',
         ],
         [
             'text' => 'customers',
-            'url'  => 'admin/customers',
+            'url'  => 'dashboard/customer',
             'icon' => 'fas fa-fw fa-users',
+            'icon_color' => 'info',
         ],
         [
             'text' => 'products',
-            'url'  => 'admin/products',
+            'url'  => 'dashboard/products',
             'icon' => 'fas fa-fw fa-boxes',
+            'icon_color' => 'info',
         ],
         [
             'text' => 'sales',
             'url'  => 'admin/sales',
             'icon' => 'fas fa-fw fa-list',
+            'icon_color' => 'info',
         ],
         [
             'text'    => 'reports',
             'icon'    => 'fas fa-fw fa-file',
+            'icon_color' => 'info',
             'submenu' => [
                 [
                     'text' => 'sales',
