@@ -12,6 +12,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>address</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -21,6 +22,7 @@
                     <td>{{ $customer->customer_name }}</td>
                     <td>{{ $customer->email }}</td>
                     <td>{{ $customer->phone }}</td>
+                    <td>{{ $customer->address }}</td>
                     <td>
                         <!-- Add links to view, edit, and delete customers -->
                         <a href="{{ route('customers.show', $customer->id) }}" class="btn btn-info">View</a>

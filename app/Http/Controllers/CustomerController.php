@@ -49,32 +49,43 @@ class CustomerController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Customers $customers)
+    public function edit(Request $request,$id)
     {
-        return view('customers.edit', compact('customers'));
+        $customer = Customers::find($id);
+
+        return view('customers.edit', compact('customer'));
     }
+
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Customers $customers)
+    public function update(Request $request,$id)
     {
-
-        $customers->update($request->all());
+        $customer = Customers::find($id);
+        $customer->customer_name = $request->post('customer_name');
+        $customer->email = $request->post('email');
+        $customer->phone = $request->post('phone');
+        $customer->address = $request->post('address');
+        $customer->update();
         
 
-        return redirect()->route('customers.index')->with('success', 'Cliente actualizado exitosamente.');
+        return redirect()->route('customers.index')->with('success', 'Client successfully updated.');
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Customers $customers)
-    {
+    public function destroy($id){
 
-        $customers->delete();
-        
+        $customer = Customers::find($id);
+        $customer->delete();
 
-        return redirect()->route('customers.index')->with('success', 'Cliente eliminado exitosamente.');
+        return redirect()->route('customers.index')->with('success', 'Customer successfully deleted.');
+
     }
+   
+
+
 }
